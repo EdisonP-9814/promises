@@ -7,7 +7,7 @@ y los callback
 console.log("inicio");
 
 new Promise((resolve, reject)=>{
-    //resolve('promesa cumplida')
+    resolve('promesa cumplida')
 
     setTimeout(()=>{
         reject('Promesa no cumplida');
