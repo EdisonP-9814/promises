@@ -13,13 +13,10 @@ function suma(a:number, b:number){
 
 function division(dividendo:number, divisor:number){
     new Promise((resolve, renject)=>{
-        if(divisor!=0){
-            resolve("Promesa Cumplida => ")
-            console.log("Solucion de la division")
-        }else{
-            renject("no se puede cumplir la promesa")
-            console.error("No se puede resolver la DIVISION = "+dividendo/divisor)
-        }
+
+        divisor != 0 ? resolve("Promesa Cumplida => ") : renject("no se puede cumplir la promesa")
+        
+        
     }).then((mensaje)=> console.log(mensaje))
     .catch((mensajeError)=> console.error(mensajeError))
     .finally(()=> console.log('fin de la promesa'))
